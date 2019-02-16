@@ -1,2 +1,2 @@
 # UCI-BootCamp
-Boot Camp Work
+This is Homework 1 - "Kickstart My Chart"
