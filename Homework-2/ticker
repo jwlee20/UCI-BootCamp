@@ -1,0 +1,37 @@
+Sub ticker()
+    ' loop through all sheets
+    
+    For Each ws In Worksheets
+        'set stock name (ticker) and stock volume (volume
+        Dim ticker As String
+        Dim volume As Double
+        
+        'total volume starts at 0
+        volume = 0
+        
+        'total volume and stock name will be printed starting at row 2
+        summary_row = 2
+        
+        'last row must be determined to know end of all stocks and last column
+        lastrow = ws.Cells(Rows.Count, 1).End(xlUp).Row
+        lastcolumn = ws.Cells(1, Columns.Count).End(xlToLeft).Column
+        
+        'Write Ticker and Total Stock Volume on top of columns
+        ws.Cells(1, 10).Value = "Ticker"
+        ws.Cells(1, 11).Value = "Total Stock Volume"
+        
+        'loop to calculate total volume and stock name
+        For i = 2 To lastrow
+            If ws.Cells(i + 1, 1).Value <> ws.Cells(i, 1).Value Then
+                ticker = ws.Cells(i, 1).Value
+                volume = volume + ws.Cells(i, 7).Value
+                ws.Range("j" & summary_row).Value = ticker
+                ws.Range("k" & summary_row).Value = volume
+                summary_row = summary_row + 1
+                volume = 0
+            Else
+                volume = volume + ws.Cells(i, 7).Value
+            End If
+        Next i
+    Next ws
+End Sub
