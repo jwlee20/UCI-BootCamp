@@ -1,2 +1,2 @@
 # UCI-BootCamp
-This is Homework 1 - "Kickstart My Chart"
+This is my BootCamp GITHUB REPO!
