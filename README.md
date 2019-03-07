@@ -1,2 +1,2 @@
 # UCI-BootCamp
-This is my BootCamp GITHUB REPO!
+This is my BootCamp Git Hub Repository!
