@@ -10,7 +10,7 @@ def init_browser():
 
 def scrape():
     browser = init_browser()
-    
+
 	url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
     browser.visit(url)
 
