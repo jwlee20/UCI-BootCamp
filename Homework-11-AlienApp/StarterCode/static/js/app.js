@@ -25,6 +25,8 @@ function handleChange(){
 	var new_tableData = tableData.filter(ufoSightings => ufoSightings.datetime === inputValue)
 	displayData(new_tableData)
 	console.log(new_tableData)
+
 }
+
 
 button.on("click",handleChange);
