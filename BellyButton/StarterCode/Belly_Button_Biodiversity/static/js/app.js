@@ -56,9 +56,9 @@ function buildCharts(sample) {
         size:size,
         color: color
       }
-
+}
     var layout = {
-      title: "Belly Button Bacteria"
+      title: "Belly Button Bacteria",
       xaxis : {title: "OTU ID"}
     }
   });
